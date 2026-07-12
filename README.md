@@ -8,6 +8,14 @@ The CV is generated from structured data and a reusable document template, allow
 
 ## Getting Started
 
+### Clone the repository
+
+Clone the repository from GitHub:
+
+```bash
+git clone git@github.com:Luca-Sclisizzo/academic-cv-generator.git
+```
+
 ### Install dependencies
 
 ``` bash
