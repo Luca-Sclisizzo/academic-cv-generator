@@ -7,7 +7,7 @@ The CV is generated from structured data and a reusable document template, allow
 ## Preview
 An example of the generated CV with this template:
 
-<img src="assets/cv_preview.png" alt="CV Preview" width="650">
+<img src="assets/cv_preview.png" alt="Example page of an academic CV generated with this tool" width="650">
 
 ------------------------------------------------------------------------
 
