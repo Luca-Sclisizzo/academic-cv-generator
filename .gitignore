@@ -3,5 +3,6 @@
 .RData
 *.RProj
 .Ruserdata
+.DS_Store 
 node_modules/
 CV_academic/
