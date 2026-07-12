@@ -55,6 +55,7 @@ Running the script again will recreate the document using the current data and o
 
 ``` text
 academic_cv_generator/
+├── asset/                     # CV preview folder
 ├── cv_academic_generator.js   # Main generator: document structure and formatting
 ├── cv_data.js                 # CV content: personal information, education, research, etc.
 ├── config.js                  # Output configuration (filename and directory)
