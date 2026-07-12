@@ -204,7 +204,7 @@ module.exports = {
   awards: [
     {
       title: "BGA Travel Award",
-      date: "2024",
+      date: "2026",
       subtitle: "Behavior Genetics Association",
       description:
         "Travel award supporting attendance at the Behavior Genetics Association Annual Meeting in Amsterdam."
@@ -214,7 +214,7 @@ module.exports = {
   conferencesTraining: [
     {
       title: "Behavior Genetics Association Annual Meeting",
-      date: "Jun 2024",
+      date: "Jun 2026",
       subtitle: "Amsterdam, Netherlands",
       description:
         "Attended the annual international conference of the Behavior Genetics Association (BGA), featuring the latest research in behavioral genetics, statistical genetics, and genomics."

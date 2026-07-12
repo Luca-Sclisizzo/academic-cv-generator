@@ -9,9 +9,9 @@ const path = require("path");
 
 module.exports = {
   outputDirectory:
-    "./CV_academic",
+    "./CV_academic",                // Output folder, change if needed
 
-  fileName: "CV_Sclisizzo.docx",
+  fileName: "CV_Sclisizzo.docx",    // Output filname
 
   get outputPath() {
     return path.join(this.outputDirectory, this.fileName);

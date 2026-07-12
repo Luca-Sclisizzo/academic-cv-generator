@@ -15,8 +15,8 @@
 // IMPORTS
 // ============================================================
 const {
-  Document, Packer, Paragraph, TextRun, AlignmentType,
-  BorderStyle, LevelFormat, TabStopType, ExternalHyperlink
+  Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle,
+  LevelFormat, TabStopType, ExternalHyperlink, Footer, PageNumber
 } = require('docx');
 
 const fs = require("fs");
@@ -120,6 +120,39 @@ const doc = new Document({
         margin: { top: 1080, right: 1134, bottom: 1080, left: 1134 }
       }
     },
+    footers: {
+    default: new Footer({
+    children: [
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        border: { top: { style: BorderStyle.SINGLE, size: 4, color: "CCCCCC", space: 4 } },
+        tabStops: [{ type: TabStopType.RIGHT, position: 9026 }],
+        children: [
+          new TextRun({
+            text: `Last updated ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}`,
+            size: 16,
+            font: "Calibri",
+            color: GRAY,
+            italics: true
+          }),
+          new TextRun({
+            text: "\t",
+            size: 16,
+            font: "Calibri",
+            color: GRAY
+          }),
+          new TextRun({
+            children: ["Page ", PageNumber.CURRENT, " of ", PageNumber.TOTAL_PAGES],
+            size: 16,
+            font: "Calibri",
+            color: GRAY,
+            italics: true
+            })
+          ]
+        })
+      ]
+    })
+  },
     children: [
 
       // ── HEADER ──────────────────────────────────────────────
