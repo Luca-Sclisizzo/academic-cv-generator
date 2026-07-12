@@ -22,20 +22,22 @@ module.exports = {
     email: "luca.sclisizzo@gmail.com",
     phone: "+39 331 572 0791",
     location: "Trieste, Italy",
-    linkedin: "",
     github: "https://github.com/Luca-Sclisizzo",
-    githubLabel: "github.com/Luca-Sclisizzo",
-    orcid: ""
+    githubLabel: "github",
+    linkedin: "https://www.linkedin.com/in/luca-sclisizzo-814b6a260/",
+    linkedinLabel: "LinkedIn",
+    orcid: "https://orcid.org/0009-0001-2757-4261",
+    orcidLabel: "ORCID"
   },
   // ── RESEARCH INTERESTS ──────────────────────────────────────────────
   researchInterests: [
-  "Behavioral genetics",
-  "Biological psychiatry",
-  "Developmental transcriptomics",
-  "Bayesian modeling",
-  "Gene expression across brain development",
-  "Polygenic risk scores",
-  "Longitudinal statistical methods"
+  "Behavioral Genetics",
+  "Biological Psychiatry",
+  "Developmental Transcriptomics",
+  "Spatio-Temporal Transcriptomics",
+  "Bayesian Modeling",
+  "Polygenic Risk Scores",
+  "Longitudinal Statistical Modeling"
   ],
   // ── EDUCATION ──────────────────────────────────────────────
   education: [

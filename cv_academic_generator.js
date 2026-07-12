@@ -153,7 +153,7 @@ const doc = new Document({
       
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        spacing: { before: 0, after: 60 },
+        spacing: { before: 0, after: 120 },
         children: [
           new TextRun({
             text:
@@ -164,10 +164,50 @@ const doc = new Document({
           }),
       
           new ExternalHyperlink({
+            link: cv.personal.linkedin,
+            children: [
+              new TextRun({
+                text: cv.personal.linkedinLabel,
+                size: 20,
+                font: "Calibri",
+                color: BLUE,
+                underline: { type: "single" }
+              })
+            ]
+          }),
+      
+          new TextRun({
+            text: "  |  ",
+            size: 20,
+            font: "Calibri",
+            color: GRAY
+          }),
+      
+          new ExternalHyperlink({
             link: cv.personal.github,
             children: [
               new TextRun({
                 text: cv.personal.githubLabel,
+                size: 20,
+                font: "Calibri",
+                color: BLUE,
+                underline: { type: "single" }
+              })
+            ]
+          }),
+      
+          new TextRun({
+            text: "  |  ",
+            size: 20,
+            font: "Calibri",
+            color: GRAY
+          }),
+      
+          new ExternalHyperlink({
+            link: cv.personal.orcid,
+            children: [
+              new TextRun({
+                text: cv.personal.orcidLabel,
                 size: 20,
                 font: "Calibri",
                 color: BLUE,
@@ -301,8 +341,8 @@ const doc = new Document({
         spacer()
       ]),
 
-      // ── WORK IN PROGRESS ────────────────────────────────────
-      sectionHeader("Work in Progress"),
+      // ── ONGOING PROJECTS ────────────────────────────────────
+      sectionHeader("Ongoing Projects"),
       ...cv.workInProgress.flatMap(project => [
         entryTitle(project.title, project.status),
         entrySubtitle(project.subtitle),
@@ -324,8 +364,8 @@ const doc = new Document({
         spacer()
       ]),
       
-      // ── CONFERENCES & TRAINING ──────────────────────────────
-      sectionHeader("Conferences & Training Schools"),
+      // ── CONFERENCES AND TRAINING ──────────────────────────────
+      sectionHeader("Conferences and Workshops"),
       ...cv.conferencesTraining.flatMap(event => [
         entryTitle(event.title, event.date),
         entrySubtitle(event.subtitle),
@@ -366,6 +406,16 @@ Packer.toBuffer(doc).then(buffer => {
     config.outputPath,
     buffer
   );
-  console.log(`Done, CV generated: ${config.outputPath}`);
+  console.log(`Done! CV generated @ ${config.outputPath}`);
+  console.log(` `);
+  console.log(`Checking the hyperlinks (if specified):`)
+  // Linkedin
+  console.log(cv.personal.linkedinLabel);
+  console.log(cv.personal.linkedin);
+  // github
+  console.log(cv.personal.githubLabel);
+  console.log(cv.personal.github);
+  // ORDIC
+  console.log(cv.personal.orcidLabel);
+  console.log(cv.personal.orcid);
 });
-
