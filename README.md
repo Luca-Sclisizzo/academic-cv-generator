@@ -4,6 +4,11 @@ Programmatic generator for an academic curriculum vitae in **Microsoft Word (.do
 
 The CV is generated from structured data and a reusable document template, allowing rapid updates, consistent formatting, and easy customization for different academic purposes (PhD applications, research positions, fellowships, conferences, etc.).
 
+## Preview
+An example of the generated CV with this template:
+
+<img src="assets/cv_preview.png" alt="CV Preview" width="650">
+
 ------------------------------------------------------------------------
 
 ## Getting Started
