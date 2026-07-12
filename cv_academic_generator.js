@@ -1,16 +1,35 @@
+/*
+ * Academic CV Generator
+ *
+ * Generates a Microsoft Word (.docx) academic curriculum vitae
+ * using Node.js and the docx library.
+ *
+ * The document structure and formatting are defined in this file,
+ * while CV information is loaded from cv_data.js and output
+ * configuration is handled by config.js.
+ *
+ * Author: Luca Sclisizzo
+ */
+
+// ============================================================
+// IMPORTS
+// ============================================================
 const {
   Document, Packer, Paragraph, TextRun, AlignmentType,
   BorderStyle, LevelFormat, TabStopType, ExternalHyperlink
 } = require('docx');
 
 const fs = require("fs");
-const config = require("./config");
-const cv = require("./cv_data");
+const config = require("./config"); // Loading the config file
+const cv = require("./cv_data"); // Loading the cv data file
 
-if (!fs.existsSync(config.outputDirectory)) {
+if (!fs.existsSync(config.outputDirectory)) { // create the output directory if it does not exist
   fs.mkdirSync(config.outputDirectory, { recursive: true });
 }
 
+// ============================================================
+// DOCUMENT FUNCTIONS & SETUP
+// ============================================================
 const BLUE = "1F4E79";
 const DARK = "1a1a1a";
 const GRAY = "555555";
@@ -77,6 +96,9 @@ function spacer(size = 80) {
   return new Paragraph({ spacing: { before: 0, after: size }, children: [new TextRun("")] });
 }
 
+// ============================================================
+// DOCUMENT CREATION
+// ============================================================
 const doc = new Document({
   numbering: {
     config: [{
@@ -336,6 +358,9 @@ const doc = new Document({
   }]
 });
 
+// ============================================================
+// EXPORT
+// ============================================================
 Packer.toBuffer(doc).then(buffer => {
   fs.writeFileSync(
     config.outputPath,

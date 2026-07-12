@@ -1,5 +1,21 @@
-module.exports = {
+/*
+ * Academic CV Data
+ *
+ * Contains the structured information used to populate the
+ * academic curriculum vitae.
+ *
+ * This file stores personal information, education, research
+ * experience, technical skills, presentations, awards, and
+ * other professional activities.
+ *
+ * The data are imported by cv_academic_generator.js, which
+ * handles the document structure and formatting.
+ *
+ * Author: Luca Sclisizzo
+ */
 
+module.exports = {
+    // ── PERSONAL ──────────────────────────────────────────────
     personal: {
     name: "LUCA SCLISIZZO",
     title: "M.Sc. Student in Applied Psychology",
@@ -11,7 +27,7 @@ module.exports = {
     githubLabel: "github.com/Luca-Sclisizzo",
     orcid: ""
   },
-  
+  // ── RESEARCH INTERESTS ──────────────────────────────────────────────
   researchInterests: [
   "Behavioral genetics",
   "Biological psychiatry",
@@ -21,7 +37,7 @@ module.exports = {
   "Polygenic risk scores",
   "Longitudinal statistical methods"
   ],
-
+  // ── EDUCATION ──────────────────────────────────────────────
   education: [
     {
       title: "M.Sc. in Applied Psychology",
@@ -46,7 +62,7 @@ module.exports = {
       ]
     }
   ],
-  
+  // ── RESEARCH EXPERIENCES ──────────────────────────────────────────────
   researchExperience: [
     {
       title: "Research Assistant",
@@ -87,7 +103,7 @@ module.exports = {
       ]
     }
   ],
-  
+  // ── TECHNICAL SKILLS ──────────────────────────────────────────────
   technicalSkills: [
     {
       category: "Statistical Software",
@@ -107,7 +123,7 @@ module.exports = {
       skills: "HPC cluster systems (SLURM), Linux/bash scripting, Git"
     }
   ],
-  
+  // ── CONFERENCE PRESENTATIONS ──────────────────────────────────────────────
   conferencePresentations: [
     {
       title: "Behavior Genetics Association (BGA) Annual Meeting",
@@ -145,7 +161,7 @@ module.exports = {
       }
     }
   ],
-  
+  // ── ONGOING PROJECTS ──────────────────────────────────────────────
   workInProgress: [
     {
       title:
@@ -182,7 +198,7 @@ module.exports = {
         "This manuscript extends the Phenome-Wide Association Study (PheWAS) framework to a longitudinal setting, leveraging the ABCD (Adolescent Brain Cognitive Development) dataset. The project investigates the relationships between psychosis dimensionality at the genetic level and its phenotypic associations and developmental trajectories across childhood, and examines the degree of change and stability of genetic liability over time."
     }
   ],
-  
+  // ── AWARDS ──────────────────────────────────────────────
   awards: [
     {
       title: "BGA Travel Award",
@@ -192,7 +208,7 @@ module.exports = {
         "Travel award supporting attendance at the Behavior Genetics Association Annual Meeting in Amsterdam."
     }
   ],
-
+  // ── CONFERENCES & WORKSHOPS ──────────────────────────────────────────────
   conferencesTraining: [
     {
       title: "Behavior Genetics Association Annual Meeting",
@@ -218,7 +234,7 @@ module.exports = {
         "Biennial conference exploring the full spectrum of personality psychology, with emphasis on innovative assessment methods leveraging mobile sensing and AI technologies."
     }
   ],
-  
+  // ── OTHER WORKING EXPERIENCES ──────────────────────────────────────────────
   otherProfessionalExperience: [
     {
       title: "International Racing Service – Biathlon",
@@ -257,7 +273,7 @@ module.exports = {
       ]
     }
   ],
-  
+  // ── LANGUAGE SKILLS ──────────────────────────────────────────────
   languages: [
     {
       language: "Italian",
