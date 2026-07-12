@@ -12,23 +12,37 @@ The CV is generated from structured data and a reusable document template, allow
 
 Clone the repository from GitHub:
 
-```bash
-git clone git@github.com:Luca-Sclisizzo/academic-cv-generator.git
+``` bash
+git clone https://github.com/Luca-Sclisizzo/academic-cv-generator.git
+```
+
+Move into the project directory:
+
+``` bash
+cd academic-cv-generator
 ```
 
 ### Install dependencies
+
+Install the required Node.js dependencies:
 
 ``` bash
 npm install
 ```
 
+This command uses the `package.json` and `package-lock.json` files to install the required packages and ensure reproducible dependency versions. Make sure these files are present in the project directory after cloning the repository.
+
 ### Generate the CV
+
+Run the generator script:
 
 ``` bash
 node cv_academic_generator.js
 ```
 
 A new `.docx` file will be generated automatically in the configured output directory.
+
+Running the script again will recreate the document using the current data and overwrite the previous file with the same name.
 
 ------------------------------------------------------------------------
 
